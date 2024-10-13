@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+
+    <!--User image layout-->
+    <LinearLayout
+        android:id="@+id/userImgLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20mdp"
+        android:background="@drawable/bg_view_profile"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        >
+        <!--Image user -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userImg"
+            android:layout_width="@dimen/_50mdp"
+            android:layout_height="@dimen/_50mdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20mdp"
+            android:background="@color/grayDark"
+            android:elevation="@dimen/_3mdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mysam"
+            app:shapeAppearance="@style/CircleImage" />
+        <!--Name user-->
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/_20mdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14font_mdp"
+            android:textStyle="bold"
+            tools:text="میثم مقدسی برازنده"
+
+            />
+    </LinearLayout>
+
+    <!--Setting layout-->
+    <LinearLayout
+        android:id="@+id/SettingLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20mdp"
+        android:background="@drawable/bg_view_profile"
+        android:orientation="vertical"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userImgLay">
+
+        <!--Change them btn-->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10mdp"
+            android:orientation="horizontal">
+
+            <!--Title btn-->
+            <TextView
+                android:id="@+id/themeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawablePadding="@dimen/_15mdp"
+                android:gravity="center_vertical"
+                android:text="@string/dark_theme"
+                android:textColor="@color/white"
+                app:drawableEndCompat="@drawable/ic_night_mode"
+                app:drawableTint="@color/white" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1mdp"
+            android:layout_marginHorizontal="@dimen/_20mdp"
+            android:background="@drawable/bg_view_divider" />
+        <!--Resume btn-->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10mdp"
+            android:orientation="horizontal">
+            <!--back img-->
+            <ImageView
+                android:layout_width="@dimen/_24mdp"
+                android:layout_height="@dimen/_24mdp"
+                android:padding="@dimen/_9mdp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/white" />
+            <!--Title btn-->
+            <TextView
+                android:id="@+id/settingTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawablePadding="@dimen/_15mdp"
+                android:gravity="center_vertical"
+                android:text="@string/setting"
+                android:textColor="@color/white"
+                app:drawableEndCompat="@drawable/ic_setting"
+                app:drawableTint="@color/white" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1mdp"
+            android:layout_marginHorizontal="@dimen/_20mdp"
+            android:background="@drawable/bg_view_divider" />
+        <!--Psychology btn-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10mdp"
+            android:orientation="horizontal">
+            <!--back img-->
+            <ImageView
+                android:layout_width="@dimen/_24mdp"
+                android:layout_height="@dimen/_24mdp"
+                android:padding="@dimen/_9mdp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/white" />
+            <!--Title btn-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_15mdp"
+                android:gravity="center_vertical"
+                android:text="@string/edit"
+                android:textColor="@color/white"
+                app:drawableEndCompat="@drawable/ic_edit"
+                app:drawableTint="@color/white" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1mdp"
+            android:layout_marginHorizontal="@dimen/_20mdp"
+            android:background="@drawable/bg_view_divider" />
+        <!--Risk management btn-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10mdp"
+            android:orientation="horizontal">
+            <!--back img-->
+            <ImageView
+                android:layout_width="@dimen/_24mdp"
+                android:layout_height="@dimen/_24mdp"
+                android:padding="@dimen/_9mdp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/white" />
+            <!--Title btn-->
+            <TextView
+                android:id="@+id/logoutTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_15mdp"
+                android:gravity="center_vertical"
+                android:text="@string/logout"
+                android:textColor="@color/white"
+                app:drawableEndCompat="@drawable/ic_exit"
+                app:drawableTint="@color/white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

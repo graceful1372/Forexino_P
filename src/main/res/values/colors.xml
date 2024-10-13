@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="mtrl_textinput_default_box_stroke_color">#313335</color>
+
+
+    <!--Dark theme-->
+    <color name="Cultured">#f6f6f6</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#43A047</color>
+    <color name="Space_Cadet">#222a4a</color> <!--Background fragment-->
+    <color name="blackAlmost">#1D1E20</color> <!--Background Bottom Nav Menu-->
+    <color name="chineseBlack">#212122</color> <!--Background Bottom Nav Menu-->
+    <color name="charcoal">#232323</color> <!--Bg Item list Home -->
+    <color name="darkGray">#404040</color> <!--Bg txt item currency -->
+
+    <color name="Sea_Serpent">#41c9da</color> <!--chart-->
+    <color name="Telemagenta">#d73c6c</color> <!--warning -->
+    <color name="Light_Slate_Gray">#798e9a</color> <!--text  not important-->
+    <color name="Light_Crimson">#fc648d</color> <!--text  warning-->
+    <color name="Gainsboro">#d3dee2</color><!--text  important-->
+    <color name="Sky_Blue">#86c7df</color> <!--chart-->
+    <color name="Aquamarine">#64FCD3</color> <!--chart-->
+    <color name="Amethyst">#9966cc</color> <!--chart-->
+    <color name="grayDark">#313335</color> <!--Background fragment-->
+    <color name="starColor">#EAFF08</color> <!--Background Button-->
+    <color name="greenLight">#B2DF24</color> <!--Background Icon Selected-->
+    <color name="crayola">#feaa2e</color><!--icon-->
+    <color name="philippineSilver">#B3B3B3</color>
+    <color name="philippineSilverAlpha">#94B3B3B3</color>
+    <color name="gunmetal">#2C2E43</color>
+
+
+    <!--Light Theme-->
+    <color name="grayLight">#D0D0D0</color> <!--Background fragment-->
+    <color name="blue">#42A5F5</color><!--Background Bottom Nav Menu-->
+    <color name="whiteSmoke">#F5F5F5</color> <!--Icon Selected-->
+    <color name="blueDark" >#283593</color> <!--Icon unselected-->
+
+
+
+</resources>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.analeys.journal.journal_add.AddJournalFragment">
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--Close fragment-->
+            <ImageView
+                android:id="@+id/closeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16mdp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_close"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--Take image-->
+            <ImageView
+                android:id="@+id/takePhotoBtn"
+                android:layout_width="@dimen/_100mdp"
+                android:layout_height="@dimen/_100mdp"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:src="@drawable/img_empty"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/closeBtn" />
+            <!--Choose symbol-->
+            <LinearLayout
+                android:id="@+id/chooseSymbolTxt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45mdp"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:background="@drawable/bg_lay_choose_symbol"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/input_layout_value"
+                app:layout_constraintStart_toStartOf="@id/input_layout_value"
+                app:layout_constraintTop_toBottomOf="@id/takePhotoBtn">
+
+                <!--show symbol-->
+                <ImageView
+                    android:id="@+id/img_symbol"
+                    android:layout_width="@dimen/_45mdp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_5mdp"
+                    android:src="@drawable/img_empty" />
+
+                <!--Name symbol-->
+                <TextView
+                    android:id="@+id/symbolTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/symbol"
+                    android:paddingHorizontal="@dimen/_5mdp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/_14font_mdp" />
+                <!--Number transaction-->
+                <EditText
+                    android:id="@+id/numberTransaction"
+                    android:layout_width="@dimen/_45mdp"
+                    android:textColor="@color/white"
+                    tools:text="12"
+                    android:inputType="numberDecimal"
+                    android:gravity="center"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+            <!--Value-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_value"
+                style="@style/CustomFillBox"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50mdp"
+                android:layout_marginHorizontal="@dimen/_40mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:hint="@string/value"
+                app:boxStrokeErrorColor="@color/red"
+
+                app:hintTextColor="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chooseSymbolTxt">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/valueEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Result-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_result"
+                style="@style/CustomFillBox"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:hint="@string/result"
+                android:textColor="@color/Gainsboro"
+                app:boxStrokeErrorColor="@color/red"
+                app:layout_constraintEnd_toEndOf="@id/input_layout_value"
+                app:layout_constraintStart_toStartOf="@id/input_layout_value"
+                app:layout_constraintTop_toBottomOf="@id/input_layout_value"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/resultEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Description-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_description"
+                style="@style/CustomFillBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:hint="@string/description"
+                app:boxStrokeErrorColor="@color/red"
+                app:hintTextColor="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@id/input_layout_result"
+                app:layout_constraintStart_toStartOf="@id/input_layout_result"
+                app:layout_constraintTop_toBottomOf="@id/input_layout_result">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descriptionEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Save btn-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/save_btn"
+                android:layout_width="@dimen/_100mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:layout_marginBottom="@dimen/_10mdp"
+                android:background="@drawable/bg_lay_choose_symbol"
+                android:backgroundTint="@color/crayola"
+                android:text="@string/save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_layout_description" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

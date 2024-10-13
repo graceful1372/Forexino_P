@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_3mdp"
+    android:layout_marginTop="@dimen/_3mdp"
+    android:elevation="@dimen/_3mdp"
+    app:cardCornerRadius="@dimen/_8mdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/charcoal">
+        <!--impact-->
+        <ImageView
+            android:id="@+id/symbolCurrencyImg"
+            android:layout_width="@dimen/_20mdp"
+            android:layout_height="@dimen/_20mdp"
+            android:layout_marginStart="@dimen/_5mdp"
+            android:layout_marginTop="@dimen/_5mdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"
+            tools:src="@drawable/ic_link" />
+        <!--Transfer rate-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_6mdp"
+            android:background="@drawable/bg_bottom_navigation"
+            android:backgroundTint="@color/darkGray"
+            android:paddingHorizontal="@dimen/_3mdp"
+            android:textColor="@color/crayola"
+            android:textSize="@dimen/_6font_mdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+2.6" />
+        <!--title-->
+        <TextView
+            android:id="@+id/nameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3mdp"
+
+            android:textColor="@color/Cultured"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/symbolCurrencyImg"
+            app:layout_constraintTop_toBottomOf="@id/symbolCurrencyImg"
+            tools:text="Bitcoin" />
+
+
+        <!--Price-->
+        <TextView
+            android:id="@+id/priceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30mdp"
+            android:layout_marginEnd="@dimen/_10mdp"
+            android:textColor="@color/Cultured"
+            android:textSize="@dimen/_10font_mdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/statusImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/statusImg"
+            app:layout_constraintTop_toTopOf="@id/statusImg"
+            tools:text="$20" />
+        <!--Link news-->
+        <ImageView
+            android:id="@+id/statusImg"
+            android:layout_width="@dimen/_20mdp"
+            android:layout_height="@dimen/_20mdp"
+            android:layout_marginStart="@dimen/_5mdp"
+            android:layout_marginTop="@dimen/_3mdp"
+            android:src="@drawable/ic_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameTxt"
+            app:tint="@color/Cultured" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

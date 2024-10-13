@@ -1,0 +1,135 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ForexUser" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/grayDark</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+    </style>
+
+    <style name="Theme.ForexUser" parent="Base.Theme.ForexUser" />
+
+    <!--BottomSheetDialog-->
+    <style name="CustomBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+    </style>
+
+    <!-- Custom style for the overflow menu -->
+    <style name="MyThemeOverlay_Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <!-- color used by navigation icon and overflow icon -->
+        <item name="colorOnPrimary">@color/crayola</item>
+    </style>
+
+    <!--Custom fill box edit text-->
+    <style name="CustomFillBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="boxStrokeColor">@color/crayola</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">@color/blackAlmost</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_10mdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_10mdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_10mdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_10mdp</item>
+        <item name="hintAnimationEnabled">true</item>
+        <item name="marginHorizontal">@dimen/_20mdp</item>
+    </style>
+
+    <!--Popup menu-->
+    <style name="PopupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_lay_choose_symbol</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <!--CalendarView Fragment Statement-->
+    <style name="CalendarDateTextAppearance">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <!--TextStyle ItemList layout-->
+    <style name="TextItemList">
+        <item name="android:textColor">@color/Light_Slate_Gray</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!--Material text input-->
+    <style name="MaterialTextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/white</item>
+        <item name="boxStrokeColor">#41c9da</item>
+        <item name="boxStrokeWidth">1dp</item>
+
+        <item name="errorTextColor">@color/Sky_Blue</item>
+    </style>
+    <!--Button-->
+    <style name="customButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/black</item>
+        <item name="cornerRadius">@dimen/_10mdp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="backgroundTint">@color/starColor</item>
+    </style>
+
+    <style name="customButtonProfile" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">@dimen/_30mdp</item>
+        <item name="android:elevation">@dimen/_3mdp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="iconPadding">@dimen/_15mdp</item>
+        <item name="drawableTint">@color/white</item>
+        <item name="android:layout_height">@dimen/_35mdp</item>
+        <item name="android:textSize">@dimen/_11font_mdp</item>
+        <item name="cornerRadius">@dimen/_10mdp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="backgroundTint">@color/blackAlmost</item>
+    </style>
+
+    <style name="CircleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <!--
+        <style name="AppTheme.MaterialCalendar">
+            <item name="colorPrimary">@color/colorPrimary</item>
+            <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+            <item name="colorAccent">@color/colorAccent</item>
+            <item name="calendarHeaderMonthTextAppearance">@style/AppTheme.MaterialCalendar.Header.MonthTextAppearance</item>
+            <item name="calendarWeekdayTextAppearance">@style/AppTheme.MaterialCalendar.WeekdayTextAppearance</item>
+        </style>
+
+        <style name="AppTheme.MaterialCalendar.Header.MonthTextAppearance">
+            <item name="android:textSize">18sp</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:textColor">@color/colorTextPrimary</item>
+        </style>
+
+        <style name="Meysam.MaterialCalendar.WeekdayTextAppearance">
+            <item name="android:textSize">14sp</item>
+            <item name="android:textColor">@color/colorTextSecondary</item>
+        </style>
+    -->
+    <!--not registered -->
+    <style name="MyTextView">
+        <item name="fontFamily">@font/iransans</item>
+        <item name="android:textSize">20sp</item>
+
+    </style>
+
+    <style name="TextTopHomeFragment">
+        <item name="fontFamily">@font/iransans</item>
+        <item name="android:textSize">15sp</item>
+
+    </style>
+</resources>

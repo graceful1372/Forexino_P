@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_100mdp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_3mdp"
+    android:layout_marginTop="@dimen/_3mdp"
+    android:elevation="@dimen/_3mdp"
+    app:cardCornerRadius="@dimen/_8mdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/charcoal">
+        <!--impact-->
+        <ImageView
+            android:id="@+id/impactImg"
+            android:layout_width="@dimen/_6mdp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/bg_impact_hight" />
+        <!--title-->
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5mdp"
+            android:ellipsize="end"
+            android:ems="6"
+            android:fontFamily="@font/iransans_bold"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11font_mdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bank Holiday" />
+        <!--country-->
+        <TextView
+            android:id="@+id/countryTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Gainsboro"
+            android:textSize="@dimen/_8font_mdp"
+            app:layout_constraintStart_toStartOf="@id/titleTxt"
+            app:layout_constraintTop_toBottomOf="@id/titleTxt"
+            tools:text="Iran" />
+        <!--Date-->
+        <TextView
+            android:id="@+id/dateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20mdp"
+            android:layout_marginBottom="@dimen/_10mdp"
+            android:textColor="@color/Gainsboro"
+            android:textSize="@dimen/_7font_mdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/titleTxt"
+            app:layout_constraintTop_toBottomOf="@id/countryTxt"
+            tools:text="2024-05-05" />
+        <!--Clock-->
+        <TextView
+            android:id="@+id/clockTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20mdp"
+            android:layout_marginBottom="@dimen/_10mdp"
+            android:drawablePadding="@dimen/_3mdp"
+            android:gravity="center_vertical"
+            android:textColor="@color/Gainsboro"
+            android:textSize="@dimen/_7font_mdp"
+            app:drawableEndCompat="@drawable/ic_clock_mini_size"
+            app:drawableTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/titleTxt"
+            app:layout_constraintTop_toBottomOf="@id/countryTxt"
+            tools:text="12:30" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

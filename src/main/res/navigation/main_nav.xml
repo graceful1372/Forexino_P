@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="ir.hmb72.forexuser.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+
+
+    </fragment>
+    <action
+        android:id="@+id/action_to_welcomeFragment"
+        app:destination="@id/welcomeFragment" />
+    <action
+        android:id="@+id/action_to_loginFragment"
+        app:destination="@id/loginFragment" />
+    <action
+        android:id="@+id/action_to_homeFragment"
+        app:destination="@id/homeFragment" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ir.hmb72.forexuser.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ir.hmb72.forexuser.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/cryptoFragment"
+        android:name="ir.hmb72.forexuser.ui.crypto.CryptoFragment"
+        android:label="fragment_crypto"
+        tools:layout="@layout/fragment_crypto" />
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="ir.hmb72.forexuser.ui.shop.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="ir.hmb72.forexuser.ui.analeys.journal.JournalFragment"
+        android:label="fragment_journal"
+        tools:layout="@layout/fragment_journal" >
+        <action
+            android:id="@+id/action_journalFragment_to_pointFragment"
+            app:destination="@id/pointFragment" />
+        <action
+            android:id="@+id/action_journalFragment_to_statementFragment"
+            app:destination="@id/statementFragment" />
+        <action
+            android:id="@+id/action_journalFragment_to_journalDetailFragment"
+            app:destination="@id/journalDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resumeFragment"
+        android:name="ir.hmb72.forexuser.ui.analeys.Resume.ResumeFragment"
+        android:label="fragment_resume"
+        tools:layout="@layout/fragment_resume" />
+    <fragment
+        android:id="@+id/psychologyFragment"
+        android:name="ir.hmb72.forexuser.ui.analeys.psychology.PsychologyFragment"
+        android:label="fragment_psychology"
+        tools:layout="@layout/fragment_psychology" />
+
+    <fragment
+        android:id="@+id/pointFragment"
+        android:name="ir.hmb72.forexuser.ui.analeys.journal.point.PointFragment"
+        android:label="fragment_point"
+        tools:layout="@layout/fragment_point" >
+        <action
+            android:id="@+id/action_pointFragment_to_detailPointFragment"
+            app:destination="@id/detailPointFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statementFragment"
+        android:name="ir.hmb72.forexuser.ui.analeys.journal.statement.StatementFragment"
+        android:label="fragment_statement"
+        tools:layout="@layout/fragment_statement" />
+    <fragment
+        android:id="@+id/riskManagementFragment2"
+        android:name="ir.hmb72.forexuser.ui.analeys.risk_management.RiskManagementFragment"
+        android:label="fragment_risk_management"
+        tools:layout="@layout/fragment_risk_management" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="ir.hmb72.forexuser.ui.welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+    <fragment
+        android:id="@+id/loginVerifyFragment"
+        android:name="ir.hmb72.forexuser.ui.login.LoginVerifyFragment"
+        android:label="fragment_login_verify"
+        tools:layout="@layout/fragment_login_verify" />
+    <fragment
+        android:id="@+id/detailSignalFragment"
+        android:name="ir.hmb72.forexuser.ui.signals.detail_signal.DetailSignalFragment"
+        android:label="fragment_detail_signal"
+        tools:layout="@layout/fragment_detail_signal" >
+        <argument
+            android:name="detail_signal_data"
+            app:argType="ir.hmb72.forexuser.data.model.network.analyze.ResponseSignal$Signal" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ir.hmb72.forexuser.ui.analeys.AnalysisFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_analysis" >
+        <action
+            android:id="@+id/action_profileFragment_to_journalFragment"
+            app:destination="@id/journalFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_riskManagementFragment2"
+            app:destination="@id/riskManagementFragment2" />
+        <action
+            android:id="@+id/action_profileFragment_to_psychologyFragment"
+            app:destination="@id/psychologyFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_resumeFragment"
+            app:destination="@id/resumeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPointFragment"
+        android:name="ir.hmb72.forexuser.ui.analeys.journal.point.point_detail.DetailPointFragment"
+        android:label="fragment_detail_point"
+        tools:layout="@layout/fragment_detail_point" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/journalDetailFragment"
+        android:name="ir.hmb72.forexuser.ui.analeys.journal.journal_detail.JournalDetailFragment"
+        android:label="fragment_journal_detail"
+        tools:layout="@layout/fragment_journal_detail" >
+        <argument android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/signalsFragment"
+        android:name="ir.hmb72.forexuser.ui.signals.SignalsFragment"
+        android:label="fragment_signals"
+        tools:layout="@layout/fragment_signals" >
+        <action
+            android:id="@+id/action_signalsFragment_to_detailSignalFragment4"
+            app:destination="@id/detailSignalFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayDark"
+    tools:context=".ui.login.LoginFragment">
+
+
+    <!--Scroll-->
+<!--    we need add scroll here for show keyboard-->
+
+
+    <!--anim login-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/login_anim"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200mdp"
+        android:layout_marginTop="@dimen/_20mdp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--Phone number-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneInpLay"
+        style="@style/CustomFillBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_50mdp"
+        android:hint="@string/phoneNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_anim"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="@color/starColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:maxLength="11"
+
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12font_mdp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sendBtn"
+        style="@style/customButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50mdp"
+        android:text="@string/sendPhoneNumber"
+        app:layout_constraintEnd_toEndOf="@id/phoneInpLay"
+        app:layout_constraintStart_toStartOf="@id/phoneInpLay"
+        app:layout_constraintTop_toBottomOf="@id/phoneInpLay" />
+    <!--Loading-->
+    <ProgressBar
+        android:id="@+id/loadingLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Gradient view-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200mdp"
+        android:alpha="0.7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/bg_gradinet" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

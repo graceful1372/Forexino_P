@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/myListFragment"
+        android:icon="@drawable/ic_my_list"
+        android:title="@string/My_list" />
+    <item
+        android:id="@+id/journalFragment"
+        android:icon="@drawable/ic_journal"
+        android:title="@string/journal" />
+
+    <item
+        android:id="@+id/psychologyFragment"
+        android:icon="@drawable/ic_psychology"
+        android:title="@string/psychology" />
+    <item
+        android:id="@+id/resumeFragment"
+        android:icon="@drawable/ic_resume"
+        android:title="@string/resume" />
+    <item
+        android:id="@+id/riskManagementFragment"
+        android:icon="@drawable/ic_risk_management"
+        android:title="@string/resume" />
+
+</menu>
